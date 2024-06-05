@@ -16,4 +16,4 @@ add to cron job, I set it to run every 20m from 5am to 23pm
 
 crontab -e
 
-*/20 5-23 * * * /root/mergeversions.py > /root/mergemov.log 2>&1
+*/20 5-23 * * * /root/mergemovies.py > /root/mergemov.log 2>&1
