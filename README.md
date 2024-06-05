@@ -3,6 +3,9 @@ Python script, to merge versions for movies accross the whole library
 
 Only tested for Jellyfin 10.9.4 on Debian
 
+You'll need sqlite3
+
+apt-get install sqlite3
 
 
 Config the following with your own
