@@ -58,5 +58,5 @@ for provider_id in unique_provider_ids:
         if response.status_code == 204:
             print(f"Merged versions count: {len(ids.split(','))} {names}")
         else:
-            print("Error occurred while merging versions")
-            break
+            print(f"Error occurred while merging versions: {ids} {names}")
+            continue
