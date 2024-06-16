@@ -3,16 +3,16 @@
 import sqlite3
 import requests
 
-# 设置变量
+# Set with your own data
 api_key = ""
 url = ""
 db = ""
 
-# 连接数据库
+# Open Jellyfin library DB
 conn = sqlite3.connect(db)
 cursor = conn.cursor()
 
-# 查询数据库
+# Query the movies list
 cursor.execute("""
     SELECT DISTINCT
         SUBSTR(ProviderIds, INSTR(ProviderIds, 'Tmdb=') + LENGTH('Tmdb='),
@@ -34,27 +34,27 @@ cursor.execute("""
 """)
 video_data = cursor.fetchall()
 
-# 关闭数据库连接
+# Close DB connection
 conn.close()
 
-# 遍历数组VideoData，删除唯一的ProviderIds行数据
+# check video_data，delete unique ProviderIds items(not duaplicated)
 unique_provider_ids = set([data[0] for data in video_data])
 for provider_id in unique_provider_ids:
     if sum(1 for data in video_data if data[0] == provider_id) == 1:
         video_data = [data for data in video_data if data[0] != provider_id]
 
-# 找出重复的ProviderIds行数据并执行合并操作
+# Find duplicate ProviderIds row data and perform the merge operation
 for provider_id in unique_provider_ids:
     if sum(1 for data in video_data if data[0] == provider_id) > 1:
-        # 组合PresentationUniqueKey和name值
+        # Combine PresentationUniqueKey and name values
         ids = ",".join([data[1] for data in video_data if data[0] == provider_id])
         names = ",".join([data[2] for data in video_data if data[0] == provider_id])
-        # 构建curl post请求
+        # Build the curl post request
         merge_url = f"{url}/Videos/MergeVersions?api_key={api_key}&ids={ids}"
-        # 发送请求
+        # post request
         #print(merge_url)
         response = requests.post(merge_url)
-        # 输出执行结果
+        # Output execution result
         if response.status_code == 204:
             print(f"Merged versions count: {len(ids.split(','))} {names}")
         else:
