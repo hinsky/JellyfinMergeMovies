@@ -1,6 +1,6 @@
 # JellyfinMergeSplit
 
-Python script, using the Jellyfin API to merge/split versions for movies/tv episodes accross the whole library
+Python script, using the Jellyfin API to merge/split mutiple versions for movies/tv episodes accross the whole library
 
 Only tested on Debian Docker version Jellyfin 10.9.x
 
