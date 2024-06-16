@@ -5,9 +5,16 @@ Python script, using the Jellyfin API to merge/split mutiple versions for movies
 Only tested on Debian Docker version Jellyfin 10.9.x
 
 
-## You'll need sqlite3
+## You'll need python3 with requests package, sqlite3
 
-apt-get install sqlite3
+sudo apt update
+
+sudo apt install sqlite3
+
+sudo apt install python3
+
+sudo python3 -m pip install requests
+
 
 
 
