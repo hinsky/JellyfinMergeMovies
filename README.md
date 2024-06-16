@@ -20,7 +20,7 @@ url = "http://127.0.0.1:8096"  #Your Jellyfin address
 
 db = "/etc/jellyfin/config/data/library.db"  #Your Jellyfin data path
 
-## arguments:
+## run with arguments:
 mergemov - Merge movies(with tmdb data)
 
 mergetvimdb - Merge TV episodes with imdb data
