@@ -25,7 +25,7 @@ mergemov - Merge movies(with tmdb data)
 
 mergetvimdb - Merge TV episodes with imdb data
 
-mergetvtbdb - Merge TV episodes with tvdb data
+mergetvtvdb - Merge TV episodes with tvdb data
 
 splitmov - Split movies
 
