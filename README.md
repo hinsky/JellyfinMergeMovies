@@ -34,6 +34,6 @@ splittv - Split TV episodes
 
 
 
-## add to cron job, I set it to run at 10am to 23pm everyday.
+## add to cron job, for example I set merge movie to run at 10:00 and 23:00 everyday.
 
 0 10,23 * * * /root/mergemovies.py mergemov > /root/mergemov.log 2>&1
