@@ -13,7 +13,7 @@ apt-get install sqlite3
 Config the following with your own
 
 
-api_key = "xxxxxxxxxxxxxx"  #Generate this API key from you Jellyfin backend
+api_key = "xxxxxxxxxxxxxx"  #Generate this API key from your Jellyfin backend
 
 url = "http://127.0.0.1:8096"  #Your Jellyfin address
 
