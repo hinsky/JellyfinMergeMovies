@@ -1,5 +1,5 @@
 # JellyfinMergeMovies
-Python script, using the Jellyfin API to merge versions for movies accross the whole Jellyfin library
+Python script, using the Jellyfin API to merge versions for movies accross the whole library
 
 Only tested for Docker version Jellyfin 10.9.x on Debian
 
